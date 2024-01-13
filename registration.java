@@ -1,6 +1,6 @@
 import javax.swing.*;
-import java.awt.event.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class registration  implements ActionListener {
 JFrame c;
@@ -37,114 +37,118 @@ String years[] = {
 
 public registration(){
     
-    c= new JFrame("Registearion Form");
-      c.setBounds(300,90,900,600);
-      c.setResizable(false);
-          
-      c.setLayout(null);
-      c.setVisible(true);
+ 
+    
     
     title = new JLabel("Registration Form");
   
   title.setFont(new Font("Arial", Font.PLAIN, 32));
   title.setSize(300,30);
   title.setLocation(300,30);
-  c.add(title);
   
   name= new JLabel("Name");
   name.setFont(new Font("Arial", Font.PLAIN, 20));
   name.setBounds(100,100,100,20);
-  c.add(name);
-
-   nametf=new JTextField();
-   nametf.setFont(new Font("Arial", Font.PLAIN, 15));
-   nametf.setBounds(200,100,190,20);
-   c.add(nametf);
-
-  mobile= new JLabel("Mobile");
-  mobile.setFont(new Font("Arial", Font.PLAIN, 20));
-  mobile.setBounds(100,150,100,20);
-  c.add(mobile);
-
-  mobiletf = new JTextField();
+  
+  nametf=new JTextField("hdf");
   nametf.setFont(new Font("Arial", Font.PLAIN, 15));
-  nametf.setBounds(200,150,190,20);
-  c.add(mobiletf);
-
- gender= new JLabel("Gender");
+   nametf.setBounds(200,100,190,20);
+   
+   mobile= new JLabel("Mobile");
+   mobile.setFont(new Font("Arial", Font.PLAIN, 20));
+  mobile.setBounds(100,150,100,20);
+  
+  mobiletf = new JTextField("dsfg");
+  nametf.setFont(new Font("Arial", Font.PLAIN, 15));
+  nametf.setBounds(200,120,190,20);
+  
+  gender= new JLabel("Gender");
  gender.setFont(new Font("Arial", Font.PLAIN, 20));
  gender.setBounds(100,200,100,20);
- c.add(gender);
-
+ 
  male= new JRadioButton("Male");
  male.setBounds(200,200,75,20);
  male.setFont(new Font("Arial", Font.PLAIN, 15));
- c.add(male);
-
+ 
  female = new JRadioButton("Female");
-female.setBounds(250,200,75,20);
-female.setFont(new Font("Arial", Font.PLAIN, 15));
-c.add(female);
-
-dob= new JLabel("DOB");
+ female.setBounds(250,200,75,20);
+ female.setFont(new Font("Arial", Font.PLAIN, 15));
+ 
+ dob= new JLabel("DOB");
 dob.setFont(new Font("Arial", Font.PLAIN, 20));
 dob.setBounds(100,250,100,20);
-c.add(dob);
 
 date= new JComboBox<>(dates);
 date.setFont(new Font("Arial", Font.PLAIN, 15));
 
 date.setBounds(200,250,50,20);
-c.add(date);
 
 month = new JComboBox<>(months);
 month.setFont(new Font("Arial", Font.PLAIN, 15));
 month.setBounds(250,250,50,20);
-c.add(month);
 
 year = new JComboBox<>(years);
 year.setFont(new Font("Arial", Font.PLAIN, 15));
 year.setBounds(300,250,50,20);
-c.add(year);
 
 
 address= new JLabel("Address");
 address.setFont(new Font("Arial", Font.PLAIN, 20));
 address.setBounds(100,300,100,20);
-c.add(address);
 
 addressta= new JTextArea();
 addressta.setBounds(200,300,100,50);
 addressta.setFont(new Font("Arial", Font.PLAIN, 15));
-c.add(addressta);
 
 box= new JCheckBox("Accept Term And Condition.");
 box.setBounds(150,400,250,20);
 box.setFont(new Font("Arial", Font.PLAIN,15));
-c.add(box);
 
 submit = new JButton("Submit");
 submit.setBounds(150,450,100,20);
 submit.setFont(new Font("Arial", Font.PLAIN, 15));
-c.add(submit);
 
 reset= new JButton("Reset");
 reset.setBounds(270,450,100,20);
 reset.setFont(new Font("Arial", Font.PLAIN, 15));
-c.add(reset);
+
 
 containerta= new JTextArea();
 containerta.setBounds(500,175,200,75);
 containerta.setFont(new Font("Arial", Font.PLAIN, 15));
-c.add(containerta);
 
+
+
+c= new JFrame("Registearion Form");
+c.setBounds(300,90,900,600);
+c.setResizable(false);
+c.add(title);
+c.add(name);
+c.add(nametf);
+c.add(mobile);
+c.add(mobiletf);
+c.add(gender);
+c.add(male);
+c.add(female);
+c.add(dob);
+c.add(date);
+c.add(month);
+c.add(year);
+c.add(address);
+c.add(addressta);
+c.add(box);
+c.add(submit);
+c.add(reset);
+c.add(containerta);
+      c.setLayout(null);
+      c.setVisible(true);
 
 }
 public void actionPerformed(ActionEvent e)
 {
   if(e.getSource() == submit){
     if(box.isSelected()){
-        String data1;
+      String data1;
         String data = "Name : " + nametf.getText() + "\n" + "Mobile : " +mobiletf.getText() + "\n";
         if(male.isSelected()){
         data1 = "Gender : Male" + "\n";
