@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * registration
+ * registration done
  */
 public class registration implements ActionListener {
 
